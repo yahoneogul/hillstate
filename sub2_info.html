@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sub2.css" />
+    <script
+      src="https://kit.fontawesome.com/f20c69eb60.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/common/header-scroll-animation.js" defer></script>
+    <script src="./js/common/mobile-nav-toggle.js" defer></script>
+    <script src="./js/common/dropdown-nav.js" defer></script>
+    <script src="./js/sub2/content-tap.js" defer></script>
+    <script src="./js/sub2/FAQ-tap.js" defer></script>
+    <script src="./js/sub2/FAQ-content-tap.js" defer></script>
+
+    <title>Infomation :: Hillstate</title>
+  </head>
+  <body>
+    <header class="global-header">
+      <h1 class="header-logo">
+        <a href="./index.html">
+          <img
+            class="header-logo-img"
+            src="./images/common/logo/logo-default.png"
+            alt="힐스테이트"
+          />
+        </a>
+      </h1>
+      <nav class="global-nav">
+        <h2 class="sr-only">대메뉴</h2>
+        <ul class="main-nav">
+          <li class="main-nav-item"><a href="./sub1_about.html">About</a></li>
+          <li class="main-nav-item dropdown-nav">
+            <a href="#">Stay<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-nav-list">
+              <li class="dropdown-nav-item">
+                <h3 class="dropdown-nav-title">분양정보</h3>
+                <ul>
+                  <li><a href="#">분양단지</a></li>
+                  <li><a href="#">분양캘린더</a></li>
+                  <li><a href="#">지역주택조합</a></li>
+                  <li><a href="#">청약가이드</a></li>
+                  <li><a href="#">청약 당첨자 조회</a></li>
+                  <li><a href="#">예비 당첨자 조회</a></li>
+                </ul>
+              </li>
+              <!-- /li.dropsown-nav-item -->
+              <li class="dropdown-nav-item">
+                <h3 class="dropdown-nav-title">단지정보</h3>
+                <ul>
+                  <li><a href="#">공사단지</a></li>
+                  <li><a href="#">입주단지</a></li>
+                  <li><a href="#">계약자 서비스</a></li>
+                  <li><a href="#">입주가이드</a></li>
+                </ul>
+              </li>
+              <!-- /li.dropsown-nav-item -->
+              <li class="dropdown-nav-item">
+                <h3 class="dropdown-nav-title">예약하기</h3>
+                <ul>
+                  <li><a href="#">공급계약</a></li>
+                  <li><a href="#">권리의무승계</a></li>
+                  <li><a href="#">방문예약</a></li>
+                  <li><a href="#">셀프등기</a></li>
+                </ul>
+              </li>
+              <!-- /li.dropsown-nav-item -->
+            </ul>
+            <!-- /ul.dropsown-nav-list -->
+          </li>
+          <li class="main-nav-item"><a href="#">Services</a></li>
+          <li class="main-nav-item"><a href="./sub2_info.html">Info</a></li>
+        </ul>
+        <!-- ul/.main-nav -->
+        <ul class="sub-nav">
+          <li>
+            <a href="#">
+              <i class="fas fa-unlock-alt"></i>
+              <span>Login</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-file-signature"></i>
+              <span>Join</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-sitemap"></i>
+              <span>Site Map</span>
+            </a>
+          </li>
+        </ul>
+        <!-- ul/.sub-nav -->
+      </nav>
+      <button class="mobile-nav-button"><i class="fas fa-bars"></i></button>
+    </header>
+    <!-- /.global-header -->
+    <div class="content-nav">
+      <ul class="content-nav-list grid-width">
+        <li class="content-nav-item">공지사항</li>
+        <li class="content-nav-item">자주묻는질문</li>
+        <li class="content-nav-item">문의하기</li>
+      </ul>
+    </div>
+    <section class="content notice">
+      <h2 class="content-title">공지사항</h2>
+      <div class="content-body grid-width">
+        <table>
+          <thead>
+            <tr>
+              <th class="table-number">번호</th>
+              <th class="table-title">제목</th>
+              <th class="registration-date">등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-number">34</td>
+              <td class="table-title">
+                송도 더테라스 재분양 공지 → 마감되었습니다.
+              </td>
+              <td class="registration-date">2021.02.01</td>
+            </tr>
+            <tr>
+              <td class="table-number">33</td>
+              <td class="table-title">홈페이지/모바일 서버 작업 안내(2/2)</td>
+              <td class="registration-date">2021.01.27</td>
+            </tr>
+            <tr>
+              <td class="table-number">32</td>
+              <td class="table-title">
+                송도 더테라스 재분양 공지 → 마감되었습니다.
+              </td>
+              <td class="registration-date">2021.01.07</td>
+            </tr>
+            <tr>
+              <td class="table-number">31</td>
+              <td class="table-title">
+                [송도 더테라스] 재분양 공지 '20.11.19' → 마감
+              </td>
+              <td class="registration-date">2020.11.19</td>
+            </tr>
+            <tr>
+              <td class="table-number">30</td>
+              <td class="table-title">
+                [송도 더테라스] 재분양 관련 분양가격표
+              </td>
+              <td class="registration-date">2020.09.01</td>
+            </tr>
+            <tr>
+              <td class="table-number">29</td>
+              <td class="table-title">
+                개인정보처리방침 변경내용 안내('20.8.3')
+              </td>
+              <td class="registration-date">2020.08.03</td>
+            </tr>
+            <tr>
+              <td class="table-number">28</td>
+              <td class="table-title">
+                개인정보처리방침 변경내용 안내('20.7.1')
+              </td>
+              <td class="registration-date">2020.07.01</td>
+            </tr>
+            <tr>
+              <td class="table-number">27</td>
+              <td class="table-title">현대 힐스테이트 서버 작업 안내</td>
+              <td class="registration-date">2020.06.09</td>
+            </tr>
+            <tr>
+              <td class="table-number">26</td>
+              <td class="table-title">
+                송도 더테라스 승강기 사용 이용 안내 & 힐스테이트센터 근무시간
+                안내
+              </td>
+              <td class="registration-date">2020.05.22</td>
+            </tr>
+            <tr>
+              <td class="table-number">25</td>
+              <td class="table-title">시스템 서버 작업 관련 안내(4/13)</td>
+              <td class="registration-date">2020.04.08</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- /notice table -->
+        <div class="pagenation">
+          <button class="active" type="button">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <button type="button">4</button>
+        </div>
+      </div>
+      <!-- /notice pagenation -->
+    </section>
+    <!-- /content notice -->
+    <section class="content FAQ">
+      <h2 class="content-title">자주묻는질문</h2>
+      <div class="content-body grid-width">
+        <ul class="FAQ-nav-list">
+          <li class="FAQ-nav-item">입주가이드</li>
+          <li class="FAQ-nav-item">계약관리</li>
+          <li class="FAQ-nav-item">시설관리</li>
+          <li class="FAQ-nav-item">주거서비스</li>
+          <li class="FAQ-nav-item">기타</li>
+        </ul>
+        <!-- FAQ-nav-list -->
+        <div class="FAQ-content">
+          <ul class="FAQ-content-list">
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>입주문의</span
+                >
+                <h3 class="FAQ-content-title">
+                  입주 전 사전 점검은 어떻게 하나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <ol>
+                  <li>
+                    입주지원 센터에 초대장을 제출하고 관람표를 수령해주세요.
+                  </li>
+                  <li>힐스테이트 매니저와 함께 세대로 이동해주세요.</li>
+                  <li>내부를 점검하신 후 관람표를 작성해주세요.</li>
+                  <li>
+                    입주지원 센터에 점검 내용 확인서와 관람표를 반납해주세요.
+                  </li>
+                </ol>
+              </div>
+            </li>
+            <!-- li FAQ-content-item 입주 전 사전 점검 -->
+          </ul>
+          <!-- ul 입주문의 -->
+          <ul class="FAQ-content-list">
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label">
+                  <i class="far fa-question-circle"></i>전자계약
+                </span>
+                <h3 class="FAQ-content-title">
+                  전자계약은 무엇이며, 절차는 어떻게 되나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  전자계약이란 부동산거래를 종이계약서 대신 온라인상
+                  전자방식으로 계약하는 시스템으로 더 편리하고 경제적이며 안전한
+                  거래가 가능토록 합니다.
+                </p>
+                <p>
+                  전자계약을 사용하려는 임차인은 '국토부 부동산거래
+                  전자계약시스템(http://irts.molit.go.kr)'에서 별도의 회원가입
+                  없이 전자계약이 가능합니다. 이름, 주민번호, 본인명의 휴대폰
+                  인증만으로 전자계약을 할 수 있습니다. 시스템을 통해 계약서를
+                  확인할 수 있고 출력할 수 있습니다.
+                </p>
+              </div>
+            </li>
+            <!-- /li <전자계약>전자계약은 무엇이며, 절차는 어떻게 되나요? -->
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>입주전</span
+                >
+                <h3 class="FAQ-content-title">
+                  잔금은 언제까지 납부해야 하나요? 현장에서도 수납이 가능한가요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  입주전에 잔금을 완납하셔야 합니다. 입주증 발급시에 잔금 완납
+                  여부를 확인을 하고 있으며, 입주기간 이후 납부 시 연체료가
+                  발생되오니 유의하시기 바랍니다.
+                </p>
+                <p>현장에서 수납은 불가능 합니다.</p>
+              </div>
+            </li>
+            <!-- /li<입주전> 잔금은 언제까지 납부해야 하나요? 현장에서도 수납이 가능한가요? -->
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>입주후</span
+                >
+                <h3 class="FAQ-content-title">
+                  관리비는 언제부터 부담하여야 하나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  관리비는 입주일(열쇠 교부일)로부터 부담하고, 입주일 전(세대
+                  입주청소 등) 열쇠를 교부하는 경우에는 열쇠 교부 시 검침한
+                  계량기 수치에 따라 부과됩니다. 또한 입주지정기간 종료일부터
+                  입주 여부와 관계없이 입주자께서 부담하셔야 합니다.
+                </p>
+              </div>
+            </li>
+            <!-- <입주> 관리비는 언제부터 부담하여야 하나요? -->
+          </ul>
+          <!-- /ul 계약관리 -->
+          <ul class="FAQ-content-list">
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>시설관리</span
+                >
+                <h3 class="FAQ-content-title">
+                  세대 시설물 고장시 어떻게 해야 하나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  입주 시 임대인과 임차인이 함께 세대 점검을 통하여 상태를
+                  확인합니다.
+                </p>
+                <p>
+                  입주 후 임차인의 귀책사유로 인한 고장 등에 관한 건은 임차인의
+                  비용으로 AS를 진행하여야 하며, 단순 사용연수 증가에 따른
+                  노후화 및 고장 등은 임대인의 비용으로 AS를 진행합니다.
+                </p>
+              </div>
+            </li>
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>시설관리</span
+                >
+                <h3 class="FAQ-content-title">
+                  세대 내에서 상업행위가 가능한가요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  단지 내에서 상업행위(어린이집, 교습소 등 )를 하는 것은
+                  허용되지 않습니다.
+                </p>
+              </div>
+            </li>
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>시설관리</span
+                >
+                <h3 class="FAQ-content-title">
+                  인테리어 샘플하우스로 입주 예정인 세대를 활용해도 되나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  인테리어 샘플하우스로 활용하는 것은 모든 세대가 허용되지
+                  않습니다.
+                  <br />과도한 원상복구 비용이 발생 되오니 유념하시기 바랍니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <!-- /ul 시설관리  -->
+          <ul class="FAQ-content-list">
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>주거서비스</span
+                >
+                <h3 class="FAQ-content-title">
+                  세대창고 신청방법은 어떻게 되나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  신청 및 배정은 홈페이지 또는 앱을 통해 서비스 개시일로부터
+                  선착순으로 진행될 예정이며, 서비스 개시는 홈페이지 별도 공지
+                  예정입니다.
+                </p>
+              </div>
+            </li>
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>주거서비스</span
+                >
+                <h3 class="FAQ-content-title">
+                  재능기부 프로그램은 무엇이있나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>
+                  재능기부 프로그램은 홈페이지 또는 앱을 통해 확인할 수 있으며,
+                  입주자 현황 및 지원여부에 따라 단지별로 차이가 있을 수
+                  있습니다.(프로그램 예시: 외국어 교육, 독서 상담, 음악교육,
+                  미술교육, 체육교육 등)
+                </p>
+              </div>
+            </li>
+          </ul>
+          <!-- /ul 주거서비스 -->
+          <ul class="FAQ-content-list">
+            <li class="FAQ-content-item">
+              <div class="FAQ-content-header">
+                <span class="FAQ-content-label"
+                  ><i class="far fa-question-circle"></i>기타</span
+                >
+                <h3 class="FAQ-content-title">
+                  홈페이지 회원가입 대상이 어떻게 되나요?
+                </h3>
+                <i class="icon fas fa-plus"></i>
+              </div>
+              <div class="FAQ-content-body">
+                <p>계약자에 한해 회원가입이 가능합니다.</p>
+                <p>
+                  ※ 사업제휴 및 사업제안등 기타 의뢰는 회원가입이 별도로
+                  필요하지 않습니다.
+                  <br />엘리스 홈페이지 내 'About >Contact us'를 통해 이용하실
+                  수 있습니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <!-- /ul 기타 -->
+        </div>
+      </div>
+    </section>
+    <!-- content FAQ -->
+    <section class="content inquiry">
+      <h2 class="content-title">문의하기</h2>
+      <div class="content-body grid-width">
+        <form action="#" method="GET">
+          <div class="form-group division">
+            <label for="serviceAndFcility" class="input-label">구분</label>
+            <div class="input-wrapper">
+              <div class="radio-group">
+                <input
+                  id="serviceAndFcility"
+                  value="serviceAndFcility"
+                  name="divison"
+                  type="radio"
+                />
+                <label for="serviceAndFcility">서비스 및 시설</label>
+              </div>
+              <!--/radio-group serviceAndFcility -->
+              <div class="radio-group">
+                <input
+                  id="paymentManagement"
+                  value="paymentManagement"
+                  name="divison"
+                  type="radio"
+                />
+                <label for="paymentManagement">납부관리</label>
+              </div>
+              <!--/radio-group paymentManagement -->
+              <div class="radio-group">
+                <input
+                  id="contractManagement"
+                  value="contractManagement"
+                  name="divison"
+                  type="radio"
+                />
+                <label for="contractManagement">계약관리</label>
+              </div>
+              <!--/radio-group contractManagement -->
+            </div>
+          </div>
+          <!--/form-group divison -->
+          <div class="form-group user-name">
+            <label for="user-name" class="input-label required"
+              >성명 또는 법인명</label
+            >
+            <div class="input-wrapper">
+              <input id="user-name" type="text" required />
+            </div>
+          </div>
+          <!--/form-group user-name -->
+          <div class="row">
+            <div class="form-group user-tel">
+              <label for="user-tel" class="input-label required"
+                >전화번호</label
+              >
+              <div class="input-wrapper">
+                <input id="user-tel" type="tel" required />
+              </div>
+            </div>
+            <!--/form-group user-tel -->
+            <div class="form-group user-email">
+              <label for="user-email" class="input-label required"
+                >이메일</label
+              >
+              <div class="input-wrapper">
+                <input id="user-email" type="email" required />
+              </div>
+            </div>
+            <!--/form-group user-email -->
+          </div>
+          <!-- row -->
+          <div class="form-group reply">
+            <label for="reply-SMS" class="input-label">회신방법</label>
+            <div class="input-wrapper">
+              <div class="radio-group">
+                <input
+                  id="reply-SMS"
+                  value="reply-SMS"
+                  name="reply"
+                  type="radio"
+                />
+                <label for="reply-SMS">SMS</label>
+              </div>
+              <!--/radio-group reply-SMS -->
+              <div class="radio-group">
+                <input
+                  id="reply-email"
+                  value="reply-email"
+                  name="reply"
+                  type="radio"
+                />
+                <label for="reply-email">이메일</label>
+              </div>
+              <!--/radio-group reply-email -->
+            </div>
+          </div>
+          <!--/form-group reply -->
+          <div class="form-group form-title">
+            <label for="form-title" class="input-label">제목</label>
+            <div class="input-wrapper">
+              <input id="form-title" type="text" />
+            </div>
+          </div>
+          <!--/form-group form-title -->
+          <div class="form-group form-content">
+            <label for="form-content" class="input-label">내용</label>
+            <div class="input-wrapper">
+              <textarea name="form-content" id="form-content"></textarea>
+            </div>
+          </div>
+          <!--/form-group form-content -->
+          <div class="form-group user-file">
+            <label for="user-file" class="input-label">첨부파일</label>
+            <div class="input-wrapper">
+              <input
+                id="user-file"
+                type="file"
+                accept=".jpg, .gif, .png, .bmp, .doc, .hwp,.pdf, .xls, .ppt"
+              />
+              <p>
+                (최대 10MB/ jpg, gif, png, bmp, doc, hwp, pdf, xls, ppt
+                첨부가능합니다.)
+              </p>
+            </div>
+          </div>
+          <!--/form-group user-file -->
+          <div class="privacy">
+            <div class="privacy-box">
+              <div>
+                <h3 class="privacy-title">제1조 개인정보 수집 및 이용목적.</h3>
+                <p>
+                  회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다
+                  <br />1. 문의접수시 기재한 개인정보 및 상담내용 확인.
+                </p>
+              </div>
+              <!-- /div 제 1조 -->
+              <div>
+                <h3 class="privacy-title">제2조 수집하는 개인정보 항목</h3>
+                <p>
+                  ① 회사는 회원가입, 상담, 서비스 신청 등을 위해 필요한 최소한의
+                  범위내에서 아래와 같은 개인정보를 수집하고 있습니다.
+                  <br />1. Contact us <br />[필수 정보] 성명 또는 법인명,
+                  전화번호, 이메일 <br />[선택 정보] 구분, 제목, 내용, 첨부파일
+                  <br />• 인터넷 이용에 관한 사항 : 접속 로그
+                </p>
+              </div>
+              <!-- /div 제 2조 -->
+              <div>
+                <h3 class="privacy-title">제3조 개인정보의 보유 및 이용기간</h3>
+                <p>
+                  원칙적으로 개인정보 이용목적 달성 및 보존기간 만료된 후에는
+                  해당 정보를 지체 없이 파기합니다. 단, 관계법령의 규정에 의하여
+                  보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한
+                  일정한 기간 동안 회원정보를 보관합니다.
+                  <br />1. 소비자의 불만 또는 분쟁처리에 관한 기록 <br />가.
+                  보존항목: 문의접수시 기재한 개인정보 및 상담내용 <br />나.
+                  보존근거: 전자상거래 등에서의 소비자보호에 관한 법률 <br />다.
+                  보존기간: 3년
+                </p>
+              </div>
+              <!-- /div 제 3조 -->
+              <div>
+                <h3 class="privacy-title">
+                  제4조 동의를 거부할 권리 및 동의 거부에 따른 불이익
+                </h3>
+                <p>
+                  이용자는 본 서비스의 개인정보 수집 및 이용 등에 대한 동의에
+                  거부할 수 있으며, 이 경우 본 서비스를 이용할 수 없습니다.
+                </p>
+              </div>
+              <!-- /div 제 4조 -->
+            </div>
+            <!--/ privacy-box -->
+            <div class="checkbox-group">
+              <input id="privacy" value="agree" type="checkbox" required />
+              <label for="privacy">개인정보 수집·이용에 동의합니다.</label>
+            </div>
+          </div>
+          <!--/privacy -->
+          <div class="buttons">
+            <button class="submit-button" type="submit">등록</button>
+            <button class="reset-button" type="reset">취소</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--/.inquiry  -->
+    <footer class="global-footer">
+      <div class="grid-width">
+        <h1 class="footer-logo">
+          <img src="./images/common/logo/footer_logo.png" alt="현대건설" />
+        </h1>
+        <div class="footer-mid">
+          <ul class="footer-menu">
+            <li><a href="#">이용약관</a></li>
+            <li>
+              <a href="#"><strong>개인정보처리방침</strong></a>
+            </li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li>
+              <dl>
+                <dt>전화문의/접수</dt>
+                <dd>1577-7755</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>FAMILY SITE</dt>
+                <dd>
+                  <a href="#"><strong>현대자동차그룹</strong></a>
+                </dd>
+                <dd>
+                  <a href="#"><strong>현대건설</strong></a>
+                </dd>
+              </dl>
+            </li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div class="adress">
+            <span>03058 서울시 종로구 율곡로 75(계동 140-2) 현대빌딩</span>
+            <span>사업자등록번호 101-81-16293</span>
+            <span>COPYRIGHTⓒ 2007 HYUNDAI E&amp;C. ALL RIGHT RESERVED</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /.global-footer -->
+  </body>
+</html>

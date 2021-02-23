@@ -1,0 +1,663 @@
+@import "./variable.scss";
+/*section slider*/
+.slider {
+  position: relative;
+  overflow: hidden;
+  .slider-list {
+    position: relative;
+    height: 95vh;
+  }
+  .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    padding: 320px 0 0 110px;
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    font-family: "Bitgoeul_Bold", "Noto Sans KR", sans-serif;
+    color: $color-white;
+    text-indent: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.showing {
+      z-index: 1;
+      opacity: 1;
+    }
+    .slider-title {
+      @include font-xxl($lh: 1.667);
+    }
+    .slider-sub-title {
+      display: block;
+      margin-top: 10px;
+      @include font-xl($lh: 1.25);
+    }
+    p {
+      margin-top: 30px;
+      @include font-sm;
+    }
+    .slider-title,
+    .slider-sub-title,
+    p {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 2s;
+    }
+    &.showing {
+      .slider-title,
+      .slider-sub-title,
+      p {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  .pagination {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 20;
+
+    transform: translateY(-50%);
+
+    margin: auto;
+    .pagination-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 10px;
+      line-height: 40px;
+      color: $color-white;
+      background-color: rgba(139, 135, 135, 0.185);
+      cursor: pointer;
+    }
+    .pagination-item:first-of-type ~ .pagination-item {
+      margin-top: 2px;
+    }
+    .pagination-item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 0;
+      height: 100%;
+      background-color: rgba(15, 15, 15, 0.555);
+      transition: 0.5s;
+    }
+    .pagination-item:hover::after {
+      width: 100%;
+    }
+    .pagination-number {
+      display: flex;
+      align-items: center;
+    }
+    .pagination-number:after {
+      content: "";
+      display: block;
+
+      margin: 4px 18px 0;
+      width: 40px;
+      height: 1px;
+      background-color: $color-white;
+    }
+    .active {
+      color: $color-brand;
+    }
+  }
+  .scroll-icon {
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    z-index: 10;
+    transform: translateX(-50%);
+
+    animation: upAndDown 1s infinite alternate;
+  }
+}
+/*content*/
+/*your-hillstate*/
+.your-hillstate {
+  .content-body {
+    position: relative;
+
+    /*730px / 1320px *100 */
+    padding-bottom: 38%;
+  }
+  .article-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .article-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .article-group-left {
+    display: flex;
+    width: 50%;
+    .width-1 {
+      width: calc(50% - 10px);
+    }
+    .width-2 {
+      width: calc(100% - 10px);
+    }
+  }
+  .article-group-middle {
+    width: 25%;
+    .width-1 {
+      width: calc(100% - 10px);
+    }
+  }
+  .article-group-right {
+    display: flex;
+    width: 25%;
+    .width-1 {
+      width: 100%;
+    }
+  }
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    cursor: pointer;
+    background-size: 102%;
+    text-indent: 0;
+    transition: 0.5s;
+    &:hover {
+      background-size: 107%;
+      .segment {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .mr-10px {
+    margin-right: 10px;
+  }
+  .height-1 {
+    height: calc(50% - 5px);
+  }
+  .height-2 {
+    height: 100%;
+  }
+  .flex-end {
+    align-self: flex-end;
+  }
+  .segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: $color-white;
+    transition: 0.5s;
+  }
+}
+/*value of hillstate*/
+.value-of-hillstate {
+  .content-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  article {
+    width: calc(25% - 40px);
+    text-align: center;
+    .img-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+
+      border-radius: 50%;
+      border: 2px solid $color-white;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      margin: auto;
+
+      width: 50%;
+      height: auto;
+    }
+    .segment {
+      margin-top: 20px;
+      .segment-title {
+        white-space: nowrap;
+      }
+      p {
+        margin-top: 10px;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+/*banner*/
+.banner {
+  padding: 80px 0;
+  background-color: $color-grey-05;
+  .grid-width {
+    display: flex;
+    justify-content: space-around;
+  }
+  .counter-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(47% -40px);
+    height: 300px;
+    color: $color-white;
+    text-align: center;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0 40px 0;
+      width: 50%;
+      &:nth-of-type(1) {
+        background-color: $color-grey-01;
+      }
+      &:nth-of-type(2) {
+        background-color: $color-grey-02;
+      }
+      &:nth-of-type(3) {
+        background-color: $color-grey-03;
+      }
+      &:nth-of-type(4) {
+        background-color: $color-grey-04;
+      }
+      .counter {
+        @include font-lg($lh: 50px);
+      }
+      .counter-title {
+        @include font-xs;
+      }
+    }
+  }
+  .review {
+    position: relative;
+    width: calc(53% - 40px);
+    height: 300px;
+    overflow: hidden;
+    .slider-list {
+      height: 200%;
+      overflow: hidden;
+    }
+    .slider-item {
+      article {
+        display: flex;
+        align-items: center;
+        padding: 15px 40px;
+        background-color: $color-white-clear;
+        height: 140px;
+        &:nth-of-type(2) {
+          margin-top: 20px;
+        }
+      }
+    }
+    .img-wrapper {
+      position: relative;
+      margin-right: 20px;
+      width: 110px;
+      height: 110px;
+      border-radius: 100px;
+      background-color: $color-grey-03;
+    }
+    .reviewer-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+    p {
+      max-width: calc(100% - 210px);
+    }
+    .pagination {
+      //display: flex;
+      display: none;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      .pagination-item {
+        margin: 0 5px;
+        width: 15px;
+        height: 15px;
+        background-color: #333;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+/*life-of-hillstate*/
+.life-of-hillstate {
+  .article-group:first-of-type ~ .article-group {
+    margin-top: 40px;
+  }
+  .article-title {
+    margin-left: 20px;
+  }
+  .article-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  article {
+    width: calc(33.333% - 40px);
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .segment-title {
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  p {
+    margin-top: 5px;
+  }
+}
+/*apartment-map*/
+.apartment-map {
+  padding: 120px 0;
+  background-image: url(../images/index/apartment-map-bg.jpg);
+  background-attachment: fixed;
+  .content-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+  .text {
+    color: $color-white;
+    .content-title {
+      text-align-last: left;
+    }
+    p {
+      @include font-xs($fw: 500);
+      &::before {
+        content: "";
+        display: block;
+        margin: 40px 0;
+        width: 130px;
+        height: 4px;
+        background-color: $color-brand;
+      }
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 5px 50px;
+      border: 2px solid $color-brand;
+      border-radius: 70px;
+      background-color: $color-brand;
+      @include font-xs($fw: 500);
+    }
+  }
+  .img-wrapper {
+    position: relative;
+    width: 400px;
+  }
+  .map {
+    width: 100%;
+    height: auto;
+  }
+  .map-pin {
+    position: absolute;
+    cursor: pointer;
+  }
+  .seoul {
+    top: 28%;
+    left: 50%;
+  }
+  .gimpo {
+    top: 23%;
+    left: 6%;
+  }
+  .hwaseong {
+    top: 67%;
+    left: 37%;
+  }
+}
+/*media queries*/
+/*media queries 1320px 이하*/
+@media screen and (max-width: 1320px) {
+  /*slider*/
+  .slider {
+    .slider-item {
+      /*90px / 1320px * 100*/
+      padding-left: 6.8%;
+    }
+  }
+}
+/*media queries 1024px 이하*/
+@media screen and (max-width: 1024px) {
+  /*slider*/
+  .slider {
+    .slider-item {
+      /*pt : 170px / 1024px * 100 */
+      /*pr : 40px / 1024px * 100 */
+      padding: 16.6% 0 0 3.9%;
+    }
+    .pagination {
+      top: 100%;
+      right: 0;
+      transform: translateY(-100%);
+    }
+  }
+  /*content*/
+  /*.your-hillstate*/
+  .your-hillstate {
+    /*1570px / 1024px * 100*/
+    .content-body {
+      padding-bottom: 153%;
+    }
+    .article-group-left {
+      width: 100%;
+      .width-1:nth-of-type(2) {
+        width: 50%;
+      }
+      .width-2 {
+        width: 100%;
+      }
+      .mr-10px:first-of-type ~ .mr-10px {
+        margin-right: 0;
+      }
+    }
+    .article-group-middle {
+      margin-top: 10px;
+      width: 50%;
+    }
+    .article-group-right {
+      margin-top: 10px;
+      width: 50%;
+    }
+  }
+  /*value-of-hillstate*/
+  .value-of-hillstate {
+    .content-body {
+      justify-content: space-between;
+    }
+    article {
+      width: calc(50% - 12px);
+      .img-wrapper {
+        margin: 0 auto;
+        /*270px / 474px * 100*/
+        width: 57%;
+        padding-bottom: 57%;
+      }
+      &:nth-of-type(2) ~ article {
+        margin-top: 40px;
+      }
+    }
+  }
+  /*banner*/
+  .banner {
+    .grid-width {
+      display: block;
+    }
+    .counter-box {
+      width: 100%;
+    }
+    .review {
+      margin-top: 40px;
+      width: 100%;
+      .slider-item {
+        article {
+          /*pt,pb : 15px / 954px * 100*/
+          /*pr,pl : 20px / 954px * 100*/
+          padding: 1.56% 2.09%;
+          p {
+            max-width: 75%;
+          }
+        }
+      }
+    }
+  }
+  /*apartment-map*/
+  .apartment-map {
+    .content-body {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text {
+      text-align: center;
+      p {
+        &::before {
+          margin: 40px auto;
+        }
+      }
+    }
+    .img-wrapper {
+      margin-top: 80px;
+    }
+  }
+}
+/*media queries 768px 이하*/
+@media screen and (max-width: 768px) {
+  /*slider*/
+  .slider {
+    .slider-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /*pt : 170px / 768px * 100*/
+      /*pr,pl : 40px / 768px * 100*/
+      padding: 22.13% 5.2% 0 5.2%;
+    }
+    .scroll-icon {
+      bottom: 30%;
+    }
+  }
+  /*content*/
+  /*value-of-hillstate*/
+  .value-of-hillstate {
+    article {
+      width: 100%;
+      .img-wrapper {
+        /*220px / 730px * 100*/
+        width: 30.13%;
+        padding-bottom: 30.13%;
+      }
+      .segmnet {
+        p {
+          padding: 30%;
+        }
+      }
+      &:first-of-type ~ article {
+        margin-top: 20px;
+      }
+    }
+  }
+  /*banner*/
+  .banner {
+    .review {
+      .slider-item {
+        article {
+          .img-wrapper {
+            width: 80px;
+            height: 80px;
+          }
+          .reviewer-img {
+            width: 70%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  /*life-of-hillstate*/
+  .life-of-hillstate {
+    .article-wrapper {
+      display: block;
+    }
+    article {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &:first-of-type ~ article {
+        margin-top: 20px;
+      }
+    }
+    img {
+      width: calc(50% - 8px);
+    }
+    .segment {
+      width: calc(50% - 8px);
+    }
+  }
+}
+/*images*/
+.slider {
+  .image-1 {
+    background-image: url(../images/index/slider_01_stylish-life.jpg);
+  }
+  .image-2 {
+    background-image: url(../images/index/slider_02_various-life.jpg);
+  }
+  .image-3 {
+    background-image: url(../images/index/slider_03_comfortable-life.jpg);
+  }
+}
+.your-hillstate {
+  .image-1 {
+    background-image: url(../images/index/your-hillstate-01.jpg);
+  }
+  .image-2 {
+    background-image: url(../images/index/your-hillstate-02.jpg);
+  }
+  .image-3 {
+    background-image: url(../images/index/your-hillstate-03.jpg);
+  }
+  .image-4 {
+    background-image: url(../images/index/your-hillstate-04.jpg);
+  }
+  .image-5 {
+    background-image: url(../images/index/your-hillstate-05.jpg);
+  }
+  .image-6 {
+    background-image: url(../images/index/your-hillstate-06.jpg);
+  }
+}

@@ -1,0 +1,520 @@
+@charset "UTF-8";
+/*section slider*/
+.slider {
+  position: relative;
+  overflow: hidden; }
+  .slider .slider-list {
+    position: relative;
+    height: 95vh; }
+  .slider .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    padding: 320px 0 0 110px;
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    font-family: "Bitgoeul_Bold", "Noto Sans KR", sans-serif;
+    color: #eeeeee;
+    text-indent: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; }
+    .slider .slider-item.showing {
+      z-index: 1;
+      opacity: 1; }
+    .slider .slider-item .slider-title {
+      font-size: 7.2rem;
+      font-weight: 500;
+      line-height: 1.667; }
+    .slider .slider-item .slider-sub-title {
+      display: block;
+      margin-top: 10px;
+      font-size: 4.8rem;
+      font-weight: 500;
+      line-height: 1.25; }
+    .slider .slider-item p {
+      margin-top: 30px;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.667; }
+    .slider .slider-item .slider-title,
+    .slider .slider-item .slider-sub-title,
+    .slider .slider-item p {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 2s; }
+    .slider .slider-item.showing .slider-title,
+    .slider .slider-item.showing .slider-sub-title,
+    .slider .slider-item.showing p {
+      transform: translateY(0);
+      opacity: 1; }
+  .slider .pagination {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 20;
+    transform: translateY(-50%);
+    margin: auto; }
+    .slider .pagination .pagination-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 10px;
+      line-height: 40px;
+      color: #eeeeee;
+      background-color: rgba(139, 135, 135, 0.185);
+      cursor: pointer; }
+    .slider .pagination .pagination-item:first-of-type ~ .pagination-item {
+      margin-top: 2px; }
+    .slider .pagination .pagination-item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      width: 0;
+      height: 100%;
+      background-color: rgba(15, 15, 15, 0.555);
+      transition: 0.5s; }
+    .slider .pagination .pagination-item:hover::after {
+      width: 100%; }
+    .slider .pagination .pagination-number {
+      display: flex;
+      align-items: center; }
+    .slider .pagination .pagination-number:after {
+      content: "";
+      display: block;
+      margin: 4px 18px 0;
+      width: 40px;
+      height: 1px;
+      background-color: #eeeeee; }
+    .slider .pagination .active {
+      color: #a00f16; }
+  .slider .scroll-icon {
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    z-index: 10;
+    transform: translateX(-50%);
+    animation: upAndDown 1s infinite alternate; }
+
+/*content*/
+/*your-hillstate*/
+.your-hillstate .content-body {
+  position: relative;
+  /*730px / 1320px *100 */
+  padding-bottom: 38%; }
+
+.your-hillstate .article-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.your-hillstate .article-group {
+  display: flex;
+  flex-wrap: wrap; }
+
+.your-hillstate .article-group-left {
+  display: flex;
+  width: 50%; }
+  .your-hillstate .article-group-left .width-1 {
+    width: calc(50% - 10px); }
+  .your-hillstate .article-group-left .width-2 {
+    width: calc(100% - 10px); }
+
+.your-hillstate .article-group-middle {
+  width: 25%; }
+  .your-hillstate .article-group-middle .width-1 {
+    width: calc(100% - 10px); }
+
+.your-hillstate .article-group-right {
+  display: flex;
+  width: 25%; }
+  .your-hillstate .article-group-right .width-1 {
+    width: 100%; }
+
+.your-hillstate article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  background-size: 102%;
+  text-indent: 0;
+  transition: 0.5s; }
+  .your-hillstate article:hover {
+    background-size: 107%; }
+    .your-hillstate article:hover .segment {
+      background-color: rgba(0, 0, 0, 0.5); }
+
+.your-hillstate .mr-10px {
+  margin-right: 10px; }
+
+.your-hillstate .height-1 {
+  height: calc(50% - 5px); }
+
+.your-hillstate .height-2 {
+  height: 100%; }
+
+.your-hillstate .flex-end {
+  align-self: flex-end; }
+
+.your-hillstate .segment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #eeeeee;
+  transition: 0.5s; }
+
+/*value of hillstate*/
+.value-of-hillstate .content-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.value-of-hillstate article {
+  width: calc(25% - 40px);
+  text-align: center; }
+  .value-of-hillstate article .img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border: 2px solid #eeeeee; }
+  .value-of-hillstate article img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 50%;
+    height: auto; }
+  .value-of-hillstate article .segment {
+    margin-top: 20px; }
+    .value-of-hillstate article .segment .segment-title {
+      white-space: nowrap; }
+    .value-of-hillstate article .segment p {
+      margin-top: 10px;
+      padding: 0 10px; }
+
+/*banner*/
+.banner {
+  padding: 80px 0;
+  background-color: #ebebeb; }
+  .banner .grid-width {
+    display: flex;
+    justify-content: space-around; }
+  .banner .counter-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(47% -40px);
+    height: 300px;
+    color: #eeeeee;
+    text-align: center; }
+    .banner .counter-box article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0 40px 0;
+      width: 50%; }
+      .banner .counter-box article:nth-of-type(1) {
+        background-color: #77777a; }
+      .banner .counter-box article:nth-of-type(2) {
+        background-color: #959599; }
+      .banner .counter-box article:nth-of-type(3) {
+        background-color: #b4b4b6; }
+      .banner .counter-box article:nth-of-type(4) {
+        background-color: #c6c6c8; }
+      .banner .counter-box article .counter {
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 50px; }
+      .banner .counter-box article .counter-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.667; }
+  .banner .review {
+    position: relative;
+    width: calc(53% - 40px);
+    height: 300px;
+    overflow: hidden; }
+    .banner .review .slider-list {
+      height: 200%;
+      overflow: hidden; }
+    .banner .review .slider-item article {
+      display: flex;
+      align-items: center;
+      padding: 15px 40px;
+      background-color: #ffffff;
+      height: 140px; }
+      .banner .review .slider-item article:nth-of-type(2) {
+        margin-top: 20px; }
+    .banner .review .img-wrapper {
+      position: relative;
+      margin-right: 20px;
+      width: 110px;
+      height: 110px;
+      border-radius: 100px;
+      background-color: #b4b4b6; }
+    .banner .review .reviewer-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .banner .review p {
+      max-width: calc(100% - 210px); }
+    .banner .review .pagination {
+      display: none;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%); }
+      .banner .review .pagination .pagination-item {
+        margin: 0 5px;
+        width: 15px;
+        height: 15px;
+        background-color: #333;
+        border-radius: 50%; }
+
+/*life-of-hillstate*/
+.life-of-hillstate .article-group:first-of-type ~ .article-group {
+  margin-top: 40px; }
+
+.life-of-hillstate .article-title {
+  margin-left: 20px; }
+
+.life-of-hillstate .article-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; }
+
+.life-of-hillstate article {
+  width: calc(33.333% - 40px); }
+
+.life-of-hillstate img {
+  width: 100%;
+  height: auto; }
+
+.life-of-hillstate .segment-title {
+  margin-top: 10px;
+  font-weight: 500; }
+
+.life-of-hillstate p {
+  margin-top: 5px; }
+
+/*apartment-map*/
+.apartment-map {
+  padding: 120px 0;
+  background-image: url(../images/index/apartment-map-bg.jpg);
+  background-attachment: fixed; }
+  .apartment-map .content-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0; }
+  .apartment-map .text {
+    color: #eeeeee; }
+    .apartment-map .text .content-title {
+      text-align-last: left; }
+    .apartment-map .text p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.667; }
+      .apartment-map .text p::before {
+        content: "";
+        display: block;
+        margin: 40px 0;
+        width: 130px;
+        height: 4px;
+        background-color: #a00f16; }
+    .apartment-map .text a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 5px 50px;
+      border: 2px solid #a00f16;
+      border-radius: 70px;
+      background-color: #a00f16;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.667; }
+  .apartment-map .img-wrapper {
+    position: relative;
+    width: 400px; }
+  .apartment-map .map {
+    width: 100%;
+    height: auto; }
+  .apartment-map .map-pin {
+    position: absolute;
+    cursor: pointer; }
+  .apartment-map .seoul {
+    top: 28%;
+    left: 50%; }
+  .apartment-map .gimpo {
+    top: 23%;
+    left: 6%; }
+  .apartment-map .hwaseong {
+    top: 67%;
+    left: 37%; }
+
+/*media queries*/
+/*media queries 1320px 이하*/
+@media screen and (max-width: 1320px) {
+  /*slider*/
+  .slider .slider-item {
+    /*90px / 1320px * 100*/
+    padding-left: 6.8%; } }
+
+/*media queries 1024px 이하*/
+@media screen and (max-width: 1024px) {
+  /*slider*/
+  .slider .slider-item {
+    /*pt : 170px / 1024px * 100 */
+    /*pr : 40px / 1024px * 100 */
+    padding: 16.6% 0 0 3.9%; }
+  .slider .pagination {
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%); }
+  /*content*/
+  /*.your-hillstate*/
+  .your-hillstate {
+    /*1570px / 1024px * 100*/ }
+    .your-hillstate .content-body {
+      padding-bottom: 153%; }
+    .your-hillstate .article-group-left {
+      width: 100%; }
+      .your-hillstate .article-group-left .width-1:nth-of-type(2) {
+        width: 50%; }
+      .your-hillstate .article-group-left .width-2 {
+        width: 100%; }
+      .your-hillstate .article-group-left .mr-10px:first-of-type ~ .mr-10px {
+        margin-right: 0; }
+    .your-hillstate .article-group-middle {
+      margin-top: 10px;
+      width: 50%; }
+    .your-hillstate .article-group-right {
+      margin-top: 10px;
+      width: 50%; }
+  /*value-of-hillstate*/
+  .value-of-hillstate .content-body {
+    justify-content: space-between; }
+  .value-of-hillstate article {
+    width: calc(50% - 12px); }
+    .value-of-hillstate article .img-wrapper {
+      margin: 0 auto;
+      /*270px / 474px * 100*/
+      width: 57%;
+      padding-bottom: 57%; }
+    .value-of-hillstate article:nth-of-type(2) ~ article {
+      margin-top: 40px; }
+  /*banner*/
+  .banner .grid-width {
+    display: block; }
+  .banner .counter-box {
+    width: 100%; }
+  .banner .review {
+    margin-top: 40px;
+    width: 100%; }
+    .banner .review .slider-item article {
+      /*pt,pb : 15px / 954px * 100*/
+      /*pr,pl : 20px / 954px * 100*/
+      padding: 1.56% 2.09%; }
+      .banner .review .slider-item article p {
+        max-width: 75%; }
+  /*apartment-map*/
+  .apartment-map .content-body {
+    flex-direction: column;
+    align-items: center; }
+  .apartment-map .text {
+    text-align: center; }
+    .apartment-map .text p::before {
+      margin: 40px auto; }
+  .apartment-map .img-wrapper {
+    margin-top: 80px; } }
+
+/*media queries 768px 이하*/
+@media screen and (max-width: 768px) {
+  /*slider*/
+  .slider .slider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*pt : 170px / 768px * 100*/
+    /*pr,pl : 40px / 768px * 100*/
+    padding: 22.13% 5.2% 0 5.2%; }
+  .slider .scroll-icon {
+    bottom: 30%; }
+  /*content*/
+  /*value-of-hillstate*/
+  .value-of-hillstate article {
+    width: 100%; }
+    .value-of-hillstate article .img-wrapper {
+      /*220px / 730px * 100*/
+      width: 30.13%;
+      padding-bottom: 30.13%; }
+    .value-of-hillstate article .segmnet p {
+      padding: 30%; }
+    .value-of-hillstate article:first-of-type ~ article {
+      margin-top: 20px; }
+  /*banner*/
+  .banner .review .slider-item article .img-wrapper {
+    width: 80px;
+    height: 80px; }
+  .banner .review .slider-item article .reviewer-img {
+    width: 70%;
+    height: auto; }
+  /*life-of-hillstate*/
+  .life-of-hillstate .article-wrapper {
+    display: block; }
+  .life-of-hillstate article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .life-of-hillstate article:first-of-type ~ article {
+      margin-top: 20px; }
+  .life-of-hillstate img {
+    width: calc(50% - 8px); }
+  .life-of-hillstate .segment {
+    width: calc(50% - 8px); } }
+
+/*images*/
+.slider .image-1 {
+  background-image: url(../images/index/slider_01_stylish-life.jpg); }
+
+.slider .image-2 {
+  background-image: url(../images/index/slider_02_various-life.jpg); }
+
+.slider .image-3 {
+  background-image: url(../images/index/slider_03_comfortable-life.jpg); }
+
+.your-hillstate .image-1 {
+  background-image: url(../images/index/your-hillstate-01.jpg); }
+
+.your-hillstate .image-2 {
+  background-image: url(../images/index/your-hillstate-02.jpg); }
+
+.your-hillstate .image-3 {
+  background-image: url(../images/index/your-hillstate-03.jpg); }
+
+.your-hillstate .image-4 {
+  background-image: url(../images/index/your-hillstate-04.jpg); }
+
+.your-hillstate .image-5 {
+  background-image: url(../images/index/your-hillstate-05.jpg); }
+
+.your-hillstate .image-6 {
+  background-image: url(../images/index/your-hillstate-06.jpg); }
