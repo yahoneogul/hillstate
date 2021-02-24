@@ -5,7 +5,7 @@
   const FAQContentLists = document.querySelectorAll(".FAQ-content-list");
   const FAQContents = document.querySelectorAll(".FAQ-content-body");
 
-  //index setting
+  //index  setting
   const dataIndexSetting = () => {
     for (let i = 0; i < FAQNavItems.length; i++) {
       FAQNavItems[i].dataset.index = i;
