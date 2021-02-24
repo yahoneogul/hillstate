@@ -116,17 +116,6 @@ body {
       @include font-xs;
     }
   }
-  @keyframes tap-animation {
-    0% {
-      display: flex;
-    }
-    1% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .content-section {
     margin-top: 60px;
     display: none;
