@@ -380,6 +380,7 @@
 }
 /*apartment-map*/
 .apartment-map {
+  text-indent: 0;
   padding: 120px 0;
   background-image: url(../images/index/apartment-map-bg.jpg);
   background-attachment: fixed;
@@ -389,7 +390,7 @@
     align-items: center;
     margin-top: 0;
   }
-  .text {
+  .content-header {
     color: $color-white;
     .content-title {
       text-align-last: left;
@@ -405,7 +406,7 @@
         background-color: $color-brand;
       }
     }
-    a {
+    .link-btn {
       display: inline-block;
       margin-top: 20px;
       padding: 5px 50px;
