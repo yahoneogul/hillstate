@@ -318,7 +318,6 @@
 
 /*apartment-map*/
 .apartment-map {
-  text-indent: 0;
   padding: 120px 0;
   background-image: url(../images/index/apartment-map-bg.jpg);
   background-attachment: fixed; }
@@ -440,9 +439,11 @@
   .apartment-map .content-body {
     flex-direction: column;
     align-items: center; }
-  .apartment-map .text {
+  .apartment-map .content-header {
     text-align: center; }
-    .apartment-map .text p::before {
+    .apartment-map .content-header .content-title {
+      text-align: center; }
+    .apartment-map .content-header p::before {
       margin: 40px auto; }
   .apartment-map .img-wrapper {
     margin-top: 80px; } }

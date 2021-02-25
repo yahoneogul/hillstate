@@ -104,8 +104,7 @@ img {
 .image {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  text-indent: -9999px; }
+  background-size: cover; }
 
 /*button*/
 button {
